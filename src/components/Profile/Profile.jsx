@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'; 
+
 export const Profile = ({ avatar, username, tag, location, stats }) => {
     return <div class="profile">
     <div class="description">
@@ -26,4 +28,12 @@ export const Profile = ({ avatar, username, tag, location, stats }) => {
         </li>
     </ul>
 </div>
+}
+
+Profile.propTypes = {
+    avatar: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.objectOf(PropTypes.number).isRequired,
 }
