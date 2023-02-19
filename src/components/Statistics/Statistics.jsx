@@ -1,18 +1,33 @@
 import PropTypes from 'prop-types'; 
+import {
+    StatisticsSection,
+    StatisticsTitle,
+    StatisticsList,
+    StatisticsItem,
+    StatisticsItemLabel,
+    StatisticsPercentage,
+} from './Statistics.styled'
+
+
+function getRandomHexColor() {
+    let bgColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    return bgColor;
+}
+
 
 export const Statistics = ({ title, stats }) => {
-    return <section class="statistics">
-        <h2 class="title">{title}</h2>
+    return <StatisticsSection>
+        <StatisticsTitle>{title}</StatisticsTitle>
 
-        <ul class="stat-list">
+        <StatisticsList>
             {stats.map(({ id, label, percentage }) => {
-                return  <li class="item" key={id}>
-                    <span class="label">{label}</span>
-                    <span class="percentage">{percentage}%</span>
-                </li>
+                return  <StatisticsItem key={id} style={{backgroundColor: getRandomHexColor()}}>
+                    <StatisticsItemLabel>{label}</StatisticsItemLabel>
+                    <StatisticsPercentage>{percentage}%</StatisticsPercentage>
+                </StatisticsItem>
             })}
-        </ul>
-</section>
+        </StatisticsList>
+</StatisticsSection>
 }
 
 Statistics.propTypes = {
