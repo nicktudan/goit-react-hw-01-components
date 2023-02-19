@@ -5,19 +5,16 @@ export const FriendsList = styled.ul`
     display: flex;
     flex-direction: column;
     gap: 16px;
-    /* align-items: center; */
     width: 20%;
-    /* height: auto; */
     margin: 0 auto;
 `;
 
 export const FriendsListItem = styled.div`
     display: flex;
     align-items: center;
-    /* width: 100%;
-    height: 100%; */
     border: 1px solid rgb(0 0 0 / 5%);
     border-radius: 4px;
+    gap: 12px;
     padding: 8px;
     box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
     cursor: pointer;
@@ -28,13 +25,25 @@ export const FriendsListItem = styled.div`
     }
 `;
 
+export const FriendsListStatus = styled.span`
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+
+    ${({ status }) => {
+    if (status) {
+        return 'background-color: #32CD32;'
+    } else if (!status) {
+        return 'background-color: #FF0000;'
+    } else {
+        return 'background-color: #808080;'
+    }
+    }}
+`;
+
 export const FriendsListItemAvatar = styled.img`
-    /* display: flex; */
     border: 1px solid rgb(0 0 0 / 10%);
     border-radius: 8%;
-    /* max-width: 60%; */
-    margin-right: 16px;
-    padding: 4px;
 `;
 
 export const FriendsListItemName = styled.p`
