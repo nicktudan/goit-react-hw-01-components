@@ -37,7 +37,7 @@ export const GlobalStyle = createGlobalStyle`
         max-width: 100%;
     }
 
-    .list {list-style: none;}
+    li {list-style: none;}
 `
 
 
