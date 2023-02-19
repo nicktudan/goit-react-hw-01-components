@@ -27,6 +27,12 @@ export const ProfileAvatar = styled.img`
     border: 4px solid rgb(0 0 0 / 40%);
     border-radius: 50%;
     max-width: 40%;
+
+    &:hover,
+    &:focus {
+        border: 4px solid #0000ff;
+        box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
+    }
 `;
 
 export const ProfileName = styled.p`

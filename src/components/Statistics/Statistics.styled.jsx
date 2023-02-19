@@ -19,8 +19,6 @@ export const StatisticsTitle = styled.h2`
 export const StatisticsList = styled.ul`
     width: 100%;
     display: flex;
-    /* justify-content: space-evenly;
-    padding: 0; */
 `;
 
 export const StatisticsItem = styled.li`
@@ -36,11 +34,9 @@ export const StatisticsItem = styled.li`
 export const StatisticsItemLabel = styled.span`
     font-size: 16px;
     padding-bottom: 8px;
-    /* color: 	#ffffff; */
 `;
 
 export const StatisticsPercentage = styled.span`
     font-size: 24px;
     font-weight: 500;
-    /* color: 	#ffffff; */
 `;
