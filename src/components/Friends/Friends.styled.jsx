@@ -9,7 +9,7 @@ export const FriendsList = styled.ul`
     margin: 0 auto;
 `;
 
-export const FriendsListItem = styled.div`
+export const FriendsListItem = styled.li`
     display: flex;
     align-items: center;
     border: 1px solid rgb(0 0 0 / 5%);

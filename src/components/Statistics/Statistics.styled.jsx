@@ -28,6 +28,7 @@ export const StatisticsItem = styled.li`
     text-align: center;
     padding: 12px;
     color: 	#ffffff;
+    text-shadow: 2px 2px 4px #000000;
 `;
 
 export const StatisticsItemLabel = styled.span`
